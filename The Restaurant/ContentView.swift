@@ -9,14 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var tabSelection = 1
+    @State private var showWebView = false
     
     var body: some View {
         TabView(selection: $tabSelection) {
-            Text("Tab Content 1")
+            WebView(url: URL(string: "http://therestaurant.ap-northeast-1.elasticbeanstalk.com/")!)
+                .edgesIgnoringSafeArea([.bottom])
                 .tag(1)
-            Text("Tab Content 2")
+            WebView(url: URL(string: "http://therestaurant.ap-northeast-1.elasticbeanstalk.com/food")!)
+                .edgesIgnoringSafeArea([.bottom])
                 .tag(2)
-            Text("Tab Content 3")
+            WebView(url: URL(string: "http://therestaurant.ap-northeast-1.elasticbeanstalk.com/drink")!)
+                .edgesIgnoringSafeArea([.bottom])
                 .tag(3)
             Text("Tab Content 4")
                 .tag(4)
