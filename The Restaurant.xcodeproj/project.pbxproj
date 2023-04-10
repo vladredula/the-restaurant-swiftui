@@ -14,6 +14,8 @@
 		F5AF085629E1753000D8CC10 /* The_RestaurantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF085529E1753000D8CC10 /* The_RestaurantTests.swift */; };
 		F5AF086029E1753000D8CC10 /* The_RestaurantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF085F29E1753000D8CC10 /* The_RestaurantUITests.swift */; };
 		F5AF086229E1753000D8CC10 /* The_RestaurantUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF086129E1753000D8CC10 /* The_RestaurantUITestsLaunchTests.swift */; };
+		F5AF086F29E1788500D8CC10 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF086E29E1788500D8CC10 /* CustomTabView.swift */; };
+		F5E1CDB229E2B428003BF92A /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E1CDB129E2B428003BF92A /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F574B6D529E2B1B60074D788 /* The-Restaurant-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "The-Restaurant-Info.plist"; sourceTree = SOURCE_ROOT; };
 		F5AF084129E1752C00D8CC10 /* The Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Restaurant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5AF084429E1752C00D8CC10 /* The_RestaurantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_RestaurantApp.swift; sourceTree = "<group>"; };
 		F5AF084629E1752C00D8CC10 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +47,8 @@
 		F5AF085B29E1753000D8CC10 /* The RestaurantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The RestaurantUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5AF085F29E1753000D8CC10 /* The_RestaurantUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_RestaurantUITests.swift; sourceTree = "<group>"; };
 		F5AF086129E1753000D8CC10 /* The_RestaurantUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_RestaurantUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F5AF086E29E1788500D8CC10 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		F5E1CDB129E2B428003BF92A /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +99,11 @@
 		F5AF084329E1752C00D8CC10 /* The Restaurant */ = {
 			isa = PBXGroup;
 			children = (
+				F574B6D529E2B1B60074D788 /* The-Restaurant-Info.plist */,
 				F5AF084429E1752C00D8CC10 /* The_RestaurantApp.swift */,
+				F5E1CDB129E2B428003BF92A /* WebView.swift */,
 				F5AF084629E1752C00D8CC10 /* ContentView.swift */,
+				F5AF086E29E1788500D8CC10 /* CustomTabView.swift */,
 				F5AF084829E1752F00D8CC10 /* Assets.xcassets */,
 				F5AF084A29E1752F00D8CC10 /* Preview Content */,
 			);
@@ -257,6 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5AF086F29E1788500D8CC10 /* CustomTabView.swift in Sources */,
+				F5E1CDB229E2B428003BF92A /* WebView.swift in Sources */,
 				F5AF084729E1752C00D8CC10 /* ContentView.swift in Sources */,
 				F5AF084529E1752C00D8CC10 /* The_RestaurantApp.swift in Sources */,
 			);
@@ -420,6 +430,7 @@
 				DEVELOPMENT_TEAM = 4L2F9ZA624;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "The-Restaurant-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +460,7 @@
 				DEVELOPMENT_TEAM = 4L2F9ZA624;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "The-Restaurant-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
