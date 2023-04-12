@@ -15,6 +15,8 @@
 		F5AF086029E1753000D8CC10 /* The_RestaurantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF085F29E1753000D8CC10 /* The_RestaurantUITests.swift */; };
 		F5AF086229E1753000D8CC10 /* The_RestaurantUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF086129E1753000D8CC10 /* The_RestaurantUITestsLaunchTests.swift */; };
 		F5AF086F29E1788500D8CC10 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF086E29E1788500D8CC10 /* CustomTabView.swift */; };
+		F5BECD6F29E469E500446FE8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5BECD7129E469E500446FE8 /* Localizable.strings */; };
+		F5BECD7629E536A000446FE8 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BECD7529E536A000446FE8 /* ConfigView.swift */; };
 		F5E1CDB229E2B428003BF92A /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E1CDB129E2B428003BF92A /* WebView.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,9 @@
 		F5AF085F29E1753000D8CC10 /* The_RestaurantUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_RestaurantUITests.swift; sourceTree = "<group>"; };
 		F5AF086129E1753000D8CC10 /* The_RestaurantUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_RestaurantUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F5AF086E29E1788500D8CC10 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		F5BECD7029E469E500446FE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F5BECD7229E46AD700446FE8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F5BECD7529E536A000446FE8 /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ConfigView.swift; sourceTree = "<group>"; };
 		F5E1CDB129E2B428003BF92A /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,7 +108,9 @@
 				F5AF084429E1752C00D8CC10 /* The_RestaurantApp.swift */,
 				F5E1CDB129E2B428003BF92A /* WebView.swift */,
 				F5AF084629E1752C00D8CC10 /* ContentView.swift */,
+				F5BECD7529E536A000446FE8 /* ConfigView.swift */,
 				F5AF086E29E1788500D8CC10 /* CustomTabView.swift */,
+				F5BECD7129E469E500446FE8 /* Localizable.strings */,
 				F5AF084829E1752F00D8CC10 /* Assets.xcassets */,
 				F5AF084A29E1752F00D8CC10 /* Preview Content */,
 			);
@@ -221,6 +228,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = F5AF083829E1752C00D8CC10;
 			productRefGroup = F5AF084229E1752C00D8CC10 /* Products */;
@@ -240,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5AF084C29E1752F00D8CC10 /* Preview Assets.xcassets in Resources */,
+				F5BECD6F29E469E500446FE8 /* Localizable.strings in Resources */,
 				F5AF084929E1752F00D8CC10 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5AF086F29E1788500D8CC10 /* CustomTabView.swift in Sources */,
+				F5BECD7629E536A000446FE8 /* ConfigView.swift in Sources */,
 				F5E1CDB229E2B428003BF92A /* WebView.swift in Sources */,
 				F5AF084729E1752C00D8CC10 /* ContentView.swift in Sources */,
 				F5AF084529E1752C00D8CC10 /* The_RestaurantApp.swift in Sources */,
@@ -304,11 +314,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		F5BECD7129E469E500446FE8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5BECD7029E469E500446FE8 /* en */,
+				F5BECD7229E46AD700446FE8 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		F5AF086329E1753000D8CC10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -369,6 +392,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
