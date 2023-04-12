@@ -11,17 +11,17 @@ struct CustomTabView: View {
     @Binding var tabSelection: Int
     @Namespace private var animationNamespace
     
-    let tabBarItems: [(image: String, imageActive: String, title: String)] = [
-        ("house", "house.fill", "Home"),
-        ("fork.knife", "fork.knife", "Food"),
-        ("wineglass", "wineglass.fill", "Drink"),
-        ("globe.asia.australia", "globe.asia.australia.fill", "Language")
+    let tabBarItems: [(image: String, imageActive: String, title: LocalizedStringKey)] = [
+        ("house", "house.fill", "home"),
+        ("fork.knife", "fork.knife", "food"),
+        ("wineglass", "wineglass.fill", "drink"),
+        ("globe.asia.australia", "globe.asia.australia.fill", "lang")
     ]
     
     var body: some View {
         ZStack {
             Rectangle()
-                .frame(height: 80)
+                .frame(height: 70)
                 .foregroundColor(Color(.black))
             HStack {
                 ForEach(0..<4) { index in
@@ -38,7 +38,6 @@ struct CustomTabView: View {
                             }
                             
                             Text(tabBarItems[index].title)
-                                .font(.caption)
                             
                             if index + 1 == tabSelection {
                                 Rectangle()
@@ -57,8 +56,10 @@ struct CustomTabView: View {
                     }
                 }
             }
-            .frame(height: 80)
+            .frame(height: 70)
             .clipShape(Rectangle())
+            .background(
+                Color.black.ignoresSafeArea(edges: .bottom))
         }
     }
 }

@@ -5,3 +5,9 @@
   Created by Vlad Redula on 2023/04/11.
   
 */
+"home" = "ホーム";
+"food" = "フード";
+"drink" = "ドリンク";
+"lang" = "言語";
+"en" = "English";
+"ja" = "日本語";

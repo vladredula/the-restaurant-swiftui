@@ -5,3 +5,9 @@
   Created by Vlad Redula on 2023/04/11.
   
 */
+"home" = "Home";
+"food" = "Food";
+"drink" = "Drink";
+"lang" = "Language";
+"en" = "English";
+"ja" = "日本語";
