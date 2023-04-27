@@ -9,27 +9,21 @@ import SwiftUI
 
 struct Food: View {
     @State var filteredItems: [Item] = []
-    @StateObject var foodModel = ItemModel(type: "food")
-    @StateObject var categoryModel = CategoryModel(type: "food")
+    @StateObject var foodViewModel = ItemViewModel(type: "food")
+    @StateObject var categoryViewModel = CategoryViewModel(type: "food")
     
     @State var selectedCategory = "appt"
     
     private func filterItems(abbr: String) {
-        filteredItems = foodModel.sortedItems().filter { item in
-            item.category.contains(abbr)
-        }
+        filteredItems = foodViewModel.filterItems(abbr: abbr)
     }
     
     private var items: [Item] {
-        filteredItems.isEmpty ? foodModel.sortedItems() : filteredItems
+        filteredItems.isEmpty ? foodViewModel.sortedItems() : filteredItems
     }
     
     private var subCategories: [String] {
-        Array(Set(items.filter { item in
-                item.category.contains(selectedCategory)
-            }
-            .map { $0.subcategory }))
-            .sorted()
+        foodViewModel.getSubCategories(abbr: selectedCategory)
     }
     
     var body: some View {
@@ -49,7 +43,9 @@ struct Food: View {
                     .font(.title2)
                     .fontWeight(.bold)
                 
-                CategoryView(categories: categoryModel.sortedItems(), selectedCategory: $selectedCategory)
+                CategoryView(
+                        categories: categoryViewModel.sortedItems(),
+                        selectedCategory: $selectedCategory)
                     .onChange(of: selectedCategory, perform: filterItems)
                     
                 ScrollView(.vertical, showsIndicators: false, content: {
@@ -88,9 +84,6 @@ struct Food: View {
             }
         }
         .background(Color("Background").ignoresSafeArea())
-        .onAppear {
-            foodModel.fetch()
-        }
     }
 }
 

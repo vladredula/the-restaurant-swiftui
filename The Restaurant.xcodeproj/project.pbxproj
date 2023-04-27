@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F516486929FA460800E529F2 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F516486829FA460800E529F2 /* CategoryView.swift */; };
+		F538E40629FA646000B18B42 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F538E40529FA646000B18B42 /* ItemViewModel.swift */; };
+		F538E40829FA6CE100B18B42 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F538E40729FA6CE100B18B42 /* CategoryViewModel.swift */; };
 		F5AF084529E1752C00D8CC10 /* The_RestaurantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF084429E1752C00D8CC10 /* The_RestaurantApp.swift */; };
 		F5AF084729E1752C00D8CC10 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF084629E1752C00D8CC10 /* ContentView.swift */; };
 		F5AF084929E1752F00D8CC10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5AF084829E1752F00D8CC10 /* Assets.xcassets */; };
@@ -48,6 +50,8 @@
 
 /* Begin PBXFileReference section */
 		F516486829FA460800E529F2 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		F538E40529FA646000B18B42 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
+		F538E40729FA6CE100B18B42 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		F574B6D529E2B1B60074D788 /* The-Restaurant-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "The-Restaurant-Info.plist"; sourceTree = SOURCE_ROOT; };
 		F5AF084129E1752C00D8CC10 /* The Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Restaurant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5AF084429E1752C00D8CC10 /* The_RestaurantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_RestaurantApp.swift; sourceTree = "<group>"; };
@@ -181,6 +185,8 @@
 				F5E1CDB129E2B428003BF92A /* WebView.swift */,
 				F5B9397429EFA2E500796408 /* Category.swift */,
 				F5B9397629EFB56000796408 /* Item.swift */,
+				F538E40529FA646000B18B42 /* ItemViewModel.swift */,
+				F538E40729FA6CE100B18B42 /* CategoryViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -321,9 +327,11 @@
 				F5B9397D29EFD0DB00796408 /* DrinkItemView.swift in Sources */,
 				F5B9397329EF9F3200796408 /* Food.swift in Sources */,
 				F5AF086F29E1788500D8CC10 /* CustomTabView.swift in Sources */,
+				F538E40629FA646000B18B42 /* ItemViewModel.swift in Sources */,
 				F5BECD7629E536A000446FE8 /* ConfigView.swift in Sources */,
 				F5B9397B29EFCD5800796408 /* Drink.swift in Sources */,
 				F516486929FA460800E529F2 /* CategoryView.swift in Sources */,
+				F538E40829FA6CE100B18B42 /* CategoryViewModel.swift in Sources */,
 				F5E1CDB229E2B428003BF92A /* WebView.swift in Sources */,
 				F5B9396F29EF63FE00796408 /* Home.swift in Sources */,
 				F5B9397729EFB56000796408 /* Item.swift in Sources */,

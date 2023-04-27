@@ -9,27 +9,21 @@ import SwiftUI
 
 struct Drink: View {
     @State var filteredItems: [Item] = []
-    @StateObject var drinkModel = ItemModel(type: "drink")
-    @StateObject var categoryModel = CategoryModel(type: "drink")
+    @StateObject var drinkViewModel = ItemViewModel(type: "drink")
+    @StateObject var categoryViewModel = CategoryViewModel(type: "drink")
     
     @State var selectedCategory = "cckt"
     
     private func filterItems(abbr: String) {
-        filteredItems = drinkModel.items.filter { item in
-            item.category.contains(abbr)
-        }
+        filteredItems = drinkViewModel.filterItems(abbr: abbr)
     }
     
     private var items: [Item] {
-        filteredItems.isEmpty ? drinkModel.sortedItems() : filteredItems
+        filteredItems.isEmpty ? drinkViewModel.sortedItems() : filteredItems
     }
     
     private var subCategories: [String] {
-        Array(Set(items.filter { item in
-                item.category.contains(selectedCategory)
-            }
-            .map { $0.subcategory }))
-            .sorted()
+        drinkViewModel.getSubCategories(abbr: selectedCategory)
     }
     
     var body: some View {
@@ -49,7 +43,9 @@ struct Drink: View {
                     .font(.title2)
                     .fontWeight(.bold)
                 
-                CategoryView(categories: categoryModel.sortedItems(), selectedCategory: $selectedCategory)
+                CategoryView(
+                        categories: categoryViewModel.sortedItems(),
+                        selectedCategory: $selectedCategory)
                     .onChange(of: selectedCategory, perform: filterItems)
                 
                 
@@ -88,9 +84,6 @@ struct Drink: View {
                 .padding(.horizontal)
             }
             .background(Color("Background").ignoresSafeArea())
-            .onAppear {
-                drinkModel.fetch()
-            }
         }
     }
 }
