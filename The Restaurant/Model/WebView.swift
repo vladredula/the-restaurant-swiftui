@@ -20,9 +20,3 @@ struct WebView:UIViewRepresentable {
         uiView.load(request)
     }
 }
-
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}

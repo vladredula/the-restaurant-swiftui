@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F516486929FA460800E529F2 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F516486829FA460800E529F2 /* CategoryView.swift */; };
 		F5AF084529E1752C00D8CC10 /* The_RestaurantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF084429E1752C00D8CC10 /* The_RestaurantApp.swift */; };
 		F5AF084729E1752C00D8CC10 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF084629E1752C00D8CC10 /* ContentView.swift */; };
 		F5AF084929E1752F00D8CC10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5AF084829E1752F00D8CC10 /* Assets.xcassets */; };
@@ -15,6 +16,14 @@
 		F5AF086029E1753000D8CC10 /* The_RestaurantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF085F29E1753000D8CC10 /* The_RestaurantUITests.swift */; };
 		F5AF086229E1753000D8CC10 /* The_RestaurantUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF086129E1753000D8CC10 /* The_RestaurantUITestsLaunchTests.swift */; };
 		F5AF086F29E1788500D8CC10 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF086E29E1788500D8CC10 /* CustomTabView.swift */; };
+		F5B9396F29EF63FE00796408 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B9396E29EF63FE00796408 /* Home.swift */; };
+		F5B9397129EF68F100796408 /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5B9397029EF68F100796408 /* Lobster-Regular.ttf */; };
+		F5B9397329EF9F3200796408 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B9397229EF9F3200796408 /* Food.swift */; };
+		F5B9397529EFA2E500796408 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B9397429EFA2E500796408 /* Category.swift */; };
+		F5B9397729EFB56000796408 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B9397629EFB56000796408 /* Item.swift */; };
+		F5B9397929EFBC6B00796408 /* FoodItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B9397829EFBC6B00796408 /* FoodItemView.swift */; };
+		F5B9397B29EFCD5800796408 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B9397A29EFCD5800796408 /* Drink.swift */; };
+		F5B9397D29EFD0DB00796408 /* DrinkItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B9397C29EFD0DB00796408 /* DrinkItemView.swift */; };
 		F5BECD6F29E469E500446FE8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F5BECD7129E469E500446FE8 /* Localizable.strings */; };
 		F5BECD7629E536A000446FE8 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BECD7529E536A000446FE8 /* ConfigView.swift */; };
 		F5E1CDB229E2B428003BF92A /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E1CDB129E2B428003BF92A /* WebView.swift */; };
@@ -38,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F516486829FA460800E529F2 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		F574B6D529E2B1B60074D788 /* The-Restaurant-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "The-Restaurant-Info.plist"; sourceTree = SOURCE_ROOT; };
 		F5AF084129E1752C00D8CC10 /* The Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Restaurant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5AF084429E1752C00D8CC10 /* The_RestaurantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_RestaurantApp.swift; sourceTree = "<group>"; };
@@ -50,6 +60,14 @@
 		F5AF085F29E1753000D8CC10 /* The_RestaurantUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_RestaurantUITests.swift; sourceTree = "<group>"; };
 		F5AF086129E1753000D8CC10 /* The_RestaurantUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_RestaurantUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F5AF086E29E1788500D8CC10 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		F5B9396E29EF63FE00796408 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		F5B9397029EF68F100796408 /* Lobster-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lobster-Regular.ttf"; path = "../../../Downloads/Lobster/Lobster-Regular.ttf"; sourceTree = "<group>"; };
+		F5B9397229EF9F3200796408 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		F5B9397429EFA2E500796408 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		F5B9397629EFB56000796408 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		F5B9397829EFBC6B00796408 /* FoodItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemView.swift; sourceTree = "<group>"; };
+		F5B9397A29EFCD5800796408 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		F5B9397C29EFD0DB00796408 /* DrinkItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkItemView.swift; sourceTree = "<group>"; };
 		F5BECD7029E469E500446FE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F5BECD7229E46AD700446FE8 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F5BECD7529E536A000446FE8 /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ConfigView.swift; sourceTree = "<group>"; };
@@ -106,12 +124,11 @@
 			children = (
 				F574B6D529E2B1B60074D788 /* The-Restaurant-Info.plist */,
 				F5AF084429E1752C00D8CC10 /* The_RestaurantApp.swift */,
-				F5E1CDB129E2B428003BF92A /* WebView.swift */,
-				F5AF084629E1752C00D8CC10 /* ContentView.swift */,
-				F5BECD7529E536A000446FE8 /* ConfigView.swift */,
-				F5AF086E29E1788500D8CC10 /* CustomTabView.swift */,
+				F5B9396D29EF63DA00796408 /* Model */,
+				F5B9396C29EF63CE00796408 /* View */,
 				F5BECD7129E469E500446FE8 /* Localizable.strings */,
 				F5AF084829E1752F00D8CC10 /* Assets.xcassets */,
+				F5B9397029EF68F100796408 /* Lobster-Regular.ttf */,
 				F5AF084A29E1752F00D8CC10 /* Preview Content */,
 			);
 			path = "The Restaurant";
@@ -140,6 +157,32 @@
 				F5AF086129E1753000D8CC10 /* The_RestaurantUITestsLaunchTests.swift */,
 			);
 			path = "The RestaurantUITests";
+			sourceTree = "<group>";
+		};
+		F5B9396C29EF63CE00796408 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F5AF084629E1752C00D8CC10 /* ContentView.swift */,
+				F5AF086E29E1788500D8CC10 /* CustomTabView.swift */,
+				F5B9396E29EF63FE00796408 /* Home.swift */,
+				F5B9397229EF9F3200796408 /* Food.swift */,
+				F5B9397829EFBC6B00796408 /* FoodItemView.swift */,
+				F5B9397A29EFCD5800796408 /* Drink.swift */,
+				F5B9397C29EFD0DB00796408 /* DrinkItemView.swift */,
+				F5BECD7529E536A000446FE8 /* ConfigView.swift */,
+				F516486829FA460800E529F2 /* CategoryView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F5B9396D29EF63DA00796408 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F5E1CDB129E2B428003BF92A /* WebView.swift */,
+				F5B9397429EFA2E500796408 /* Category.swift */,
+				F5B9397629EFB56000796408 /* Item.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5AF084C29E1752F00D8CC10 /* Preview Assets.xcassets in Resources */,
+				F5B9397129EF68F100796408 /* Lobster-Regular.ttf in Resources */,
 				F5BECD6F29E469E500446FE8 /* Localizable.strings in Resources */,
 				F5AF084929E1752F00D8CC10 /* Assets.xcassets in Resources */,
 			);
@@ -274,11 +318,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5B9397D29EFD0DB00796408 /* DrinkItemView.swift in Sources */,
+				F5B9397329EF9F3200796408 /* Food.swift in Sources */,
 				F5AF086F29E1788500D8CC10 /* CustomTabView.swift in Sources */,
 				F5BECD7629E536A000446FE8 /* ConfigView.swift in Sources */,
+				F5B9397B29EFCD5800796408 /* Drink.swift in Sources */,
+				F516486929FA460800E529F2 /* CategoryView.swift in Sources */,
 				F5E1CDB229E2B428003BF92A /* WebView.swift in Sources */,
+				F5B9396F29EF63FE00796408 /* Home.swift in Sources */,
+				F5B9397729EFB56000796408 /* Item.swift in Sources */,
 				F5AF084729E1752C00D8CC10 /* ContentView.swift in Sources */,
+				F5B9397929EFBC6B00796408 /* FoodItemView.swift in Sources */,
 				F5AF084529E1752C00D8CC10 /* The_RestaurantApp.swift in Sources */,
+				F5B9397529EFA2E500796408 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,7 +430,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -433,7 +485,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -457,9 +509,9 @@
 				INFOPLIST_FILE = "The-Restaurant-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -487,9 +539,9 @@
 				INFOPLIST_FILE = "The-Restaurant-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

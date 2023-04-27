@@ -6,8 +6,78 @@
   
 */
 "home" = "ホーム";
+"menu" = "メニュ";
 "food" = "フード";
 "drink" = "ドリンク";
+"setting" = "設定";
+"foodMenu" = "フードメニュ";
+"drinkMenu" = "ドリンクメニュ";
+"all" = "全て";
 "lang" = "言語";
 "en" = "English";
 "ja" = "日本語";
+
+// categories - food
+"appetizers" = "前菜";
+"signature" = "シグネチャー";
+"grill" = "グリル";
+"entrée" = "アントレ";
+"burgers" = "ハンバーガー";
+"salads" = "サラダ";
+"desserts" = "デザート";
+"kid’s" = "キッズメ";
+
+// categories - drink
+"cocktails" = "カクテル";
+"spirits" = "スピリッツ";
+"wine" = "ワイン";
+"beer" = "ビール";
+"ultimates" = "アルティメット";
+"blended" = "ブレンド";
+"non-alcoholic" = "ノンアルコール";
+
+// sub categories - food
+"original" = "オリジナル";
+"salad" = "サラダ";
+"sandwich & tacos" = "サンドイッチ＆タコス";
+"premium" = "プレミアム";
+"soup" = "スープ";
+
+// sub categories - drink
+"standard cocktails" = "スタンダード";
+"favorites" = "お気に入り";
+"tropical" = "トロピカル";
+"fridaystm cocktails" = "フライデーズカクテル";
+"see what's shakin'" = "シェイク";
+"tequila" = "テキーラ";
+"vodka" = "ウォッカ";
+"rum" = "ラム酒";
+"whiskey" = "ウィスキー";
+"gin" = "ジン";
+"white wine" = "白ワイン";
+"red wine" = "赤ワイン";
+"sparkling wine" = "スパークリングワイン";
+"rose" = "ローゼ";
+"bottled beer" = "瓶ビール";
+"draft beer" = "生ビール";
+"alcohol free" = "ノンアルコール";
+"beer cocktail" = "ビアカクテル";
+"tea,coffee & soda (free refills)" = "紅茶、コーヒー、ソーダ (おかわり自由)";
+"mocktail" = "モクテル";
+"smoothies & shakes" = "スムージー＆シェイク";
+"fruit juices" = "フルーツジュース";
+"other" = "他の";
+"slush" = "スラッシュ";
+
+// item card
+"half" = "ハーフサイズ:";
+"regular" = "レギュラーサイズ:";
+"full" = "フルサイズ:";
+"glass" = "グラス:";
+"bottle" = "ボトル:";
+"halfbottle" = "ハーフボトル:";
+"s" = "小:";
+"r" = "中:";
+"l" = "大:";
+"1p" = "1 ピース:";
+"2p" = "2 ピース:";
