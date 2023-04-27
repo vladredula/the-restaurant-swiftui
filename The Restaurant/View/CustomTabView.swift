@@ -23,7 +23,7 @@ struct CustomTabView: View {
                 Button {
                     tabSelection = index + 1
                 } label: {
-                    VStack(spacing:0) {
+                    VStack(spacing:2) {
                         
                         if index + 1 == tabSelection {
                             Image(systemName: tabBarItems[index].imageActive)
