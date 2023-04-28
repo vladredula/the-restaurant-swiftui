@@ -12,7 +12,7 @@ struct Items: Codable {
 }
 
 struct Item: Identifiable, Codable {
-    var id: String
+    var id: Int
     var name: String
     var tname: String
     var category: String

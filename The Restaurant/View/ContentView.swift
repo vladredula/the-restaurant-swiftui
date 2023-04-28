@@ -21,13 +21,10 @@ struct ContentView: View {
             TabView(selection: $tabSelection) {
                 
                 Home(moveTo: $tabSelection)
-//                WebView(url: URL(string: "http://therestaurant.ap-northeast-1.elasticbeanstalk.com/")!)
                     .tag(1)
                 Food()
-//                WebView(url: URL(string: "http://therestaurant.ap-northeast-1.elasticbeanstalk.com/food")!)
                     .tag(2)
                 Drink()
-//                WebView(url: URL(string: "http://therestaurant.ap-northeast-1.elasticbeanstalk.com/drink")!)
                     .tag(3)
                 ConfigView()
                     .tag(4)

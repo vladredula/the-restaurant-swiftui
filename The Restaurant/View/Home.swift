@@ -40,7 +40,6 @@ struct Home: View {
                             .padding(.vertical, 60)
                             .padding(.leading, 40)
                             .background(Color("AccentColor"))
-//                            .cornerRadius(15)
                         
                         Image("burger-nobg")
                             .resizable()
@@ -89,7 +88,6 @@ struct Home: View {
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
         Home(moveTo: .constant(1))
-//            .environment(\.locale, .init(identifier: "ja"))
     }
 }
 

@@ -7,6 +7,42 @@
 
 import SwiftUI
 
+struct FoodItemView: View {
+    var currentLang: String = Locale.current.language.languageCode?.identifier ?? ""
+    var food: Item
+    
+    var body: some View {
+        
+        HStack(spacing: 15) {
+            
+            URLImage(urlString: food.imgUrl)
+            
+            VStack {
+                
+                Text(currentLang == "en" ? food.name : food.tname)
+                    .frame(alignment: .leading)
+                    .font(.headline)
+                    .fontWeight(.bold)
+                    .padding(.top)
+                    .padding(.trailing)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                Spacer()
+                
+                FoodPrices(priceString: food.price)
+                    .padding(.trailing)
+                    .padding(.bottom)
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+            }
+                
+        }
+        .frame(height: 110)
+        .background(Color(UIColor.systemGray6))
+        .clipShape(Rectangle())
+        .padding(.bottom, 10)
+    }
+}
+
 struct URLImage: View {
     let urlString: String
     
@@ -43,42 +79,6 @@ struct URLImage: View {
         }
         
         task.resume()
-    }
-}
-
-struct FoodItemView: View {
-    var currentLang: String = Locale.current.language.languageCode?.identifier ?? ""
-    var food: Item
-    
-    var body: some View {
-        
-        HStack(spacing: 15) {
-            
-            URLImage(urlString: food.imgUrl)
-            
-            VStack {
-                
-                Text(currentLang == "en" ? food.name : food.tname)
-                    .frame(alignment: .leading)
-                    .font(.headline)
-                    .fontWeight(.bold)
-                    .padding(.top)
-                    .padding(.trailing)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    
-                Spacer()
-                
-                FoodPrices(priceString: food.price)
-                    .padding(.trailing)
-                    .padding(.bottom)
-                    .frame(maxWidth: .infinity, alignment: .trailing)
-            }
-                
-        }
-        .frame(height: 110)
-        .background(Color(UIColor.systemGray6))
-        .clipShape(Rectangle())
-        .padding(.bottom, 10)
     }
 }
 

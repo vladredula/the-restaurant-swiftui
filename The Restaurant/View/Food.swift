@@ -14,10 +14,6 @@ struct Food: View {
     
     @State var selectedCategory = "appt"
     
-    private func filterItems(abbr: String) {
-        filteredItems = foodViewModel.filterItems(abbr: abbr)
-    }
-    
     private var items: [Item] {
         filteredItems.isEmpty ? foodViewModel.sortedItems() : filteredItems
     }
@@ -85,11 +81,14 @@ struct Food: View {
         }
         .background(Color("Background").ignoresSafeArea())
     }
+    
+    private func filterItems(abbr: String) {
+        filteredItems = foodViewModel.filterItems(abbr: abbr)
+    }
 }
 
 struct Food_Previews: PreviewProvider {
     static var previews: some View {
         Food()
-//            .environment(\.locale, .init(identifier: "ja"))
     }
 }

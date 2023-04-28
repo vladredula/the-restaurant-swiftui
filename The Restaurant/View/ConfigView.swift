@@ -25,7 +25,7 @@ struct ConfigView: View {
     var body: some View {
         List {
             
-            Toggle("Dark Mode", isOn: $isDark)
+            Toggle("darkMode", isOn: $isDark)
                 .toggleStyle(SwitchToggleStyle(tint: Color.accentColor))
             
             HStack {

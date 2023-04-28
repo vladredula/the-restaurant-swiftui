@@ -18,7 +18,6 @@ struct DrinkItemView: View {
             
             Text(currentLang == "en" ? drink.name : drink.tname)
                 .font(.headline)
-//                .fontWeight(.bold)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading)
                 .padding(.top)
@@ -30,7 +29,6 @@ struct DrinkItemView: View {
                 .padding(.bottom)
         }
         .background(Color("Background"))
-//        .cornerRadius(20)
     }
 }
 

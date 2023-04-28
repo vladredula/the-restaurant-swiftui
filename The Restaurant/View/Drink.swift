@@ -14,10 +14,6 @@ struct Drink: View {
     
     @State var selectedCategory = "cckt"
     
-    private func filterItems(abbr: String) {
-        filteredItems = drinkViewModel.filterItems(abbr: abbr)
-    }
-    
     private var items: [Item] {
         filteredItems.isEmpty ? drinkViewModel.sortedItems() : filteredItems
     }
@@ -85,6 +81,10 @@ struct Drink: View {
             }
             .background(Color("Background").ignoresSafeArea())
         }
+    }
+    
+    private func filterItems(abbr: String) {
+        filteredItems = drinkViewModel.filterItems(abbr: abbr)
     }
 }
 
