@@ -10,10 +10,12 @@
 "food" = "Food";
 "drink" = "Drink";
 "setting" = "Settings";
-"lang" = "Language";
 "foodMenu" = "Food Menu";
 "drinkMenu" = "Drink Menu";
-"all" = "All";
+
+// config
+"lang" = "Language";
+"darkMode" = "Dark Mode";
 "en" = "English";
 "ja" = "日本語";
 

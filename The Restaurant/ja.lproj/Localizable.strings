@@ -12,8 +12,10 @@
 "setting" = "設定";
 "foodMenu" = "フードメニュ";
 "drinkMenu" = "ドリンクメニュ";
-"all" = "全て";
+
+// config
 "lang" = "言語";
+"darkMode" = "ダークモード";
 "en" = "English";
 "ja" = "日本語";
 
