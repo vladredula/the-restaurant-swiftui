@@ -9,82 +9,92 @@ import SwiftUI
 
 struct Drink: View {
     @State var filteredItems: [Item] = []
-    @StateObject var drinkViewModel = ItemViewModel(type: "drink")
-    @StateObject var categoryViewModel = CategoryViewModel(type: "drink")
+    @StateObject var drinkModel = MenuModel()
     
     @State var selectedCategory = "cckt"
     
     private var items: [Item] {
-        filteredItems.isEmpty ? drinkViewModel.sortedItems() : filteredItems
+        filteredItems.isEmpty ? drinkModel.items : filteredItems
     }
     
     private var subCategories: [String] {
-        drinkViewModel.getSubCategories(abbr: selectedCategory)
+        drinkModel.getSubCategories(abbr: selectedCategory)
     }
     
     var body: some View {
+        
         ZStack {
             
-            Text("drink")
-                .font(.system(size: 100))
-                .fontWeight(.heavy)
-                .textCase(.uppercase)
-                .foregroundColor(Color.gray.opacity(0.1))
-                .frame(maxHeight: getRect().height, alignment: .top)
-                .offset(y:-22)
-            
-            VStack(spacing: 15) {
+            if items.isEmpty {
+                ProgressView()
+            } else {
                 
-                Text("drinkMenu")
-                    .font(.title2)
-                    .fontWeight(.bold)
+                Text("drink")
+                    .font(.system(size: 100))
+                    .fontWeight(.heavy)
+                    .textCase(.uppercase)
+                    .foregroundColor(Color.gray.opacity(0.1))
+                    .frame(maxHeight: getRect().height, alignment: .top)
+                    .offset(y:-22)
                 
-                CategoryView(
-                        categories: categoryViewModel.sortedItems(),
-                        selectedCategory: $selectedCategory)
-                    .onChange(of: selectedCategory, perform: filterItems)
-                
-                
-                ScrollView(.vertical, showsIndicators: false, content: {
+                VStack(spacing: 15) {
                     
-                    ScrollViewReader { itemProxy in
+                    Text("drinkMenu")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                    
+                    CategoryView(
+                            categories: drinkModel.categories,
+                            selectedCategory: $selectedCategory)
+                        .onChange(of: selectedCategory, perform: filterItems)
+                    
+                    
+                    ScrollView(.vertical, showsIndicators: false, content: {
                         
-                        ForEach(subCategories, id: \.self) { subcat in
+                        ScrollViewReader { itemProxy in
                             
-                            VStack (spacing: 2) {
-                                Text(LocalizedStringKey(subcat))
-                                    .textCase(/*@START_MENU_TOKEN@*/.uppercase/*@END_MENU_TOKEN@*/)
-                                    .frame(maxWidth: .infinity, alignment: .center)
-                                    .padding(.vertical, 8)
-                                    .foregroundColor(.white)
-                                    .background(Color("Nav"))
+                            ForEach(subCategories, id: \.self) { subcat in
                                 
-                                ForEach(
-                                    items.filter{ filtered in
-                                        filtered.subcategory.contains(subcat)
-                                    }) { item in
-                                        DrinkItemView(drink: item)
-                                    }
+                                VStack (spacing: 2) {
+                                    
+                                    Text(LocalizedStringKey(subcat))
+                                        .textCase(/*@START_MENU_TOKEN@*/.uppercase/*@END_MENU_TOKEN@*/)
+                                        .frame(maxWidth: .infinity, alignment: .center)
+                                        .padding(.vertical, 8)
+                                        .foregroundColor(.white)
+                                        .background(Color("Nav"))
+                                    
+                                    ForEach(items.filter{ filtered in filtered.subcategory.contains(subcat)}) { item in
+                                            DrinkItemView(drink: item)
+                                        }
+                                }
+                                .id(subcat)
+                                .padding(.bottom)
                             }
-                            .id(subcat)
-                            .padding(.bottom)
-                        }
-                        .onChange(of: subCategories) { newValue in
-                            withAnimation(.spring()) {
-                                itemProxy.scrollTo(newValue.first, anchor: .top)
+                            .onChange(of: subCategories) { newValue in
+                                withAnimation(.spring()) {
+                                    itemProxy.scrollTo(newValue.first, anchor: .top)
+                                }
                             }
                         }
-                    }
-                    
-                })
-                .padding(.horizontal)
+                        
+                    })
+                    .padding(.horizontal)
+                }
+                .background(Color("Background").ignoresSafeArea())
             }
-            .background(Color("Background").ignoresSafeArea())
+        }
+        .task {
+            do {
+                try await drinkModel.fetchDrinkItems()
+            } catch {
+                print(error)
+            }
         }
     }
     
     private func filterItems(abbr: String) {
-        filteredItems = drinkViewModel.filterItems(abbr: abbr)
+        filteredItems = drinkModel.filterItems(abbr: abbr)
     }
 }
 

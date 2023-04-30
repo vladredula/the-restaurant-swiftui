@@ -20,6 +20,7 @@ struct CategoryView: View {
                 HStack (spacing: 0) {
                     
                     ForEach(categories) { category in
+                        
                         Text(LocalizedStringKey(category.name))
                             .font(.title3)
                             .textCase(.uppercase)
@@ -43,10 +44,3 @@ struct CategoryView: View {
         .background(Color("Nav"))
     }
 }
-
-//struct CategoryView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CategoryView()
-//        CategoryView()
-//    }
-//}

@@ -14,6 +14,7 @@ class MenuModel: ObservableObject {
     
     @Published var items: [Item] = []
     @Published var categories: [Category] = []
+    @Published var isLoading: Bool = false
     
     func fetchFoodItems() async throws {
         items = try await client.fetchItems(url: URL.foodItems)

@@ -21,11 +21,8 @@ struct FoodItemView: View {
                     .frame(width: 130)
                 
             } placeholder: {
-                Image(systemName: "photo.circle.fill")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
+                ProgressView()
                     .frame(width: 130)
-                    .background(Color.gray)
             }
             
             VStack {
@@ -123,7 +120,7 @@ struct ItemPrices: View {
     }
 }
 
-struct FoodItemView_Previews: PreviewProvider {
+struct ItemView_Previews: PreviewProvider {
     static var previews: some View {
         Food()
 //            .environment(\.locale, .init(identifier: "ja"))

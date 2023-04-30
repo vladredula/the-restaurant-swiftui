@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Items: Codable {
-    let items: [Item]
+    var items: [Item]
 }
 
 struct Item: Identifiable, Codable {
