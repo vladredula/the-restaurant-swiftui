@@ -77,13 +77,12 @@ struct Drink: View {
                                 }
                             }
                         }
-                        
                     })
                     .padding(.horizontal)
                 }
-                .background(Color("Background").ignoresSafeArea())
             }
         }
+        .background(Color("Background").ignoresSafeArea())
         .task {
             do {
                 try await drinkModel.fetchDrinkItems()

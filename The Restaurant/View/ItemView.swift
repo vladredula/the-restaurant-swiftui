@@ -39,10 +39,10 @@ struct FoodItemView: View {
                 
                 VStack {
                     ItemPrices(priceString: food.price)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
                 }
                 .padding(.trailing)
                 .padding(.bottom)
-                .frame(maxWidth: .infinity, alignment: .trailing)
             }
                 
         }

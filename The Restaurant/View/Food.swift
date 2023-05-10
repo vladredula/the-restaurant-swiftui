@@ -82,6 +82,7 @@ struct Food: View {
                 }
             }
         }
+        .background(Color("Background").ignoresSafeArea())
         .task {
             do {
                 try await foodModel.fetchFoodItems()
@@ -89,7 +90,6 @@ struct Food: View {
                 print(error)
             }
         }
-        .background(Color("Background").ignoresSafeArea())
     }
     
     private func filterItems(abbr: String) {
