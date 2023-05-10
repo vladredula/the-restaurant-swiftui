@@ -51,6 +51,7 @@
 /* Begin PBXFileReference section */
 		F516486829FA460800E529F2 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		F52C966529FE3C8800CED9B3 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		F52C96672A0001D300CED9B3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F538E40529FA646000B18B42 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		F574B6D529E2B1B60074D788 /* The-Restaurant-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "The-Restaurant-Info.plist"; sourceTree = SOURCE_ROOT; };
 		F58AD15129FE31DA00728EE5 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
@@ -152,6 +153,7 @@
 				F5AF084829E1752F00D8CC10 /* Assets.xcassets */,
 				F5B9397029EF68F100796408 /* Lobster-Regular.ttf */,
 				F5AF084A29E1752F00D8CC10 /* Preview Content */,
+				F52C96672A0001D300CED9B3 /* README.md */,
 			);
 			path = "The Restaurant";
 			sourceTree = "<group>";
