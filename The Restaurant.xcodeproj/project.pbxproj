@@ -123,6 +123,7 @@
 		F5AF083829E1752C00D8CC10 = {
 			isa = PBXGroup;
 			children = (
+				F52C96672A0001D300CED9B3 /* README.md */,
 				F5AF084329E1752C00D8CC10 /* The Restaurant */,
 				F5AF085429E1753000D8CC10 /* The RestaurantTests */,
 				F5AF085E29E1753000D8CC10 /* The RestaurantUITests */,
@@ -153,7 +154,6 @@
 				F5AF084829E1752F00D8CC10 /* Assets.xcassets */,
 				F5B9397029EF68F100796408 /* Lobster-Regular.ttf */,
 				F5AF084A29E1752F00D8CC10 /* Preview Content */,
-				F52C96672A0001D300CED9B3 /* README.md */,
 			);
 			path = "The Restaurant";
 			sourceTree = "<group>";
