@@ -34,10 +34,10 @@ extension URL {
     }
     
     static var foodCategories: URL {
-        URL(string: "category/type/food", relativeTo: Self.default)!
+        URL(string: "category/food", relativeTo: Self.default)!
     }
     
     static var drinkCategories: URL {
-        URL(string: "category/type/drink", relativeTo: Self.default)!
+        URL(string: "category/drink", relativeTo: Self.default)!
     }
 }

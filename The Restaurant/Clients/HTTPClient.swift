@@ -8,10 +8,14 @@
 import Foundation
 
 class HTTPClient {
+    let token = "therestaurantauthtoken"
     
     func fetchItems(url: URL) async throws -> [Item] {
         
-        let request = URLRequest(url: url)
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue("\(token)", forHTTPHeaderField: "authorizationToken")
+        
         let (data, _) = try await URLSession.shared.data(for: request)
         let items = try JSONDecoder().decode(Items.self, from: data)
         
@@ -20,7 +24,10 @@ class HTTPClient {
     
     func fetchCategories(url: URL) async throws -> [Category] {
         
-        let request = URLRequest(url: url)
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue("\(token)", forHTTPHeaderField: "authorizationToken")
+        
         let (data, _) = try await URLSession.shared.data(for: request)
         let categories = try JSONDecoder().decode(Categories.self, from: data)
         
