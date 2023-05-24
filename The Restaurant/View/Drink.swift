@@ -24,18 +24,18 @@ struct Drink: View {
     var body: some View {
         
         ZStack {
+                
+            Text("drink")
+                .font(.system(size: 100))
+                .fontWeight(.heavy)
+                .textCase(.uppercase)
+                .foregroundColor(Color.gray.opacity(0.1))
+                .frame(maxHeight: getRect().height, alignment: .top)
+                .offset(y:-22)
             
             if items.isEmpty {
                 ProgressView()
             } else {
-                
-                Text("drink")
-                    .font(.system(size: 100))
-                    .fontWeight(.heavy)
-                    .textCase(.uppercase)
-                    .foregroundColor(Color.gray.opacity(0.1))
-                    .frame(maxHeight: getRect().height, alignment: .top)
-                    .offset(y:-22)
                 
                 VStack(spacing: 15) {
                     
@@ -78,10 +78,10 @@ struct Drink: View {
                             }
                         }
                     })
-                    .padding(.horizontal)
                 }
             }
         }
+        .frame(maxWidth:getRect().width)
         .background(Color("Background").ignoresSafeArea())
         .task {
             do {

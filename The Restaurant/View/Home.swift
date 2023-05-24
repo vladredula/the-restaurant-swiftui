@@ -23,7 +23,7 @@ struct Home: View {
             
             ScrollView(.vertical, showsIndicators: false, content: {
                 
-                VStack{
+                VStack(spacing: 10) {
                     Text("menu")
                         .font(.largeTitle)
                         .fontWeight(.heavy)
@@ -40,14 +40,16 @@ struct Home: View {
                             .padding(.vertical, 60)
                             .padding(.leading, 40)
                             .background(Color("AccentColor"))
+                            .cornerRadius(25, corners: [.topLeft, .bottomLeft])
                         
                         Image("burger-nobg")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .shadow(color: Color.black.opacity(0.7), radius: 20, x: 0, y: 10)
                             .frame(width: 350, height: 180, alignment: .trailing)
                     }
-                    .padding(.leading)
+                    .shadow(color: Color.black.opacity(0.5), radius: 20, x: 0, y: 10)
+                    .padding(.leading, 20)
+                    .padding(.bottom)
                     .onTapGesture {
                         withAnimation(.spring()) {
                             moveTo = 2
@@ -65,14 +67,15 @@ struct Home: View {
                             .padding(.vertical, 60)
                             .padding(.trailing, 40)
                             .background(Color("AccentColor"))
+                            .cornerRadius(25, corners: [.topRight, .bottomRight])
                         
                         Image("drink-nobg")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .shadow(color: Color.black.opacity(0.7), radius: 20, x: 0, y: 10)
-                            .frame(width: 350, height: 220, alignment: .leading)
+                            .frame(width: 350, height: 210, alignment: .leading)
                     }
-                    .padding(.trailing)
+                    .shadow(color: Color.black.opacity(0.5), radius: 20, x: 0, y: 10)
+                    .padding(.trailing, 20)
                     .onTapGesture {
                         withAnimation(.spring()) {
                             moveTo = 3
@@ -91,8 +94,23 @@ struct Home_Previews: PreviewProvider {
     }
 }
 
+struct RoundedCorner: Shape {
+
+    var radius: CGFloat = .infinity
+    var corners: UIRectCorner = .allCorners
+
+    func path(in rect: CGRect) -> Path {
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        return Path(path.cgPath)
+    }
+}
+
 extension View {
     func getRect()->CGRect {
         UIScreen.main.bounds
+    }
+    
+    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+        clipShape( RoundedCorner(radius: radius, corners: corners) )
     }
 }

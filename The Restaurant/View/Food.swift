@@ -24,17 +24,17 @@ struct Food: View {
     var body: some View {
         ZStack {
             
+            Text("food")
+                .font(.system(size: 100))
+                .fontWeight(.heavy)
+                .textCase(.uppercase)
+                .foregroundColor(Color.gray.opacity(0.1))
+                .frame(maxHeight: getRect().height, alignment: .top)
+                .offset(y:-22)
+            
             if items.isEmpty {
                 ProgressView()
             } else {
-                
-                Text("food")
-                    .font(.system(size: 100))
-                    .fontWeight(.heavy)
-                    .textCase(.uppercase)
-                    .foregroundColor(Color.gray.opacity(0.1))
-                    .frame(maxHeight: getRect().height, alignment: .top)
-                    .offset(y:-22)
                 
                 VStack(spacing: 15) {
                     
@@ -53,7 +53,7 @@ struct Food: View {
                             
                             ForEach(subCategories, id: \.self) { subcat in
                                 
-                                VStack (spacing: 2) {
+                                VStack {
                                     
                                     Text(LocalizedStringKey(subcat))
                                         .textCase(.uppercase)
@@ -61,11 +61,11 @@ struct Food: View {
                                         .padding(.vertical, 8)
                                         .foregroundColor(.white)
                                         .background(Color.accentColor)
-                                        .padding(.bottom, 10)
                                     
                                     ForEach(
                                         items.filter{ filtered in filtered.subcategory.contains(subcat)}) { item in
                                             FoodItemView(food: item)
+                                                .padding(.vertical, 5)
                                         }
                                 }
                                 .id(subcat)
@@ -78,10 +78,10 @@ struct Food: View {
                             }
                         }
                     })
-                    .padding(.horizontal)
                 }
             }
         }
+        .frame(maxWidth:getRect().width)
         .background(Color("Background").ignoresSafeArea())
         .task {
             do {

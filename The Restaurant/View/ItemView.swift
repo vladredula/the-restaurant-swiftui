@@ -13,17 +13,21 @@ struct FoodItemView: View {
     
     var body: some View {
         
-        HStack(spacing: 15) {
+        HStack {
             
             AsyncImage(url: URL(string: food.imgUrl)) { image in
                 image.resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 130)
                 
             } placeholder: {
-                ProgressView()
-                    .frame(width: 130)
+//                ProgressView()
+                Image(systemName: "fork.knife.circle")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .foregroundColor(.gray)
             }
+            .frame(width: 130, height: 110)
+            .background(Color.gray.opacity(0.3))
             
             VStack {
                 
@@ -48,8 +52,9 @@ struct FoodItemView: View {
         }
         .frame(height: 110)
         .background(Color(UIColor.systemGray6))
-        .clipShape(Rectangle())
-        .padding(.bottom, 10)
+        .cornerRadius(15)
+        .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2.5)
+        .padding(.horizontal)
     }
 }
 

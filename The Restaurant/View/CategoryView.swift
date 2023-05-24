@@ -22,11 +22,10 @@ struct CategoryView: View {
                     ForEach(categories) { category in
                         
                         Text(LocalizedStringKey(category.name))
-                            .font(.title3)
                             .textCase(.uppercase)
                             .padding(.vertical, 12)
                             .padding(.horizontal, 15)
-                            .frame(minWidth: 100)
+                            .frame(minWidth: 125)
                             .background(selectedCategory == category.abbr ? Color.accentColor : Color("Nav"))
                             .id(category.abbr)
                             .onTapGesture {
@@ -42,5 +41,12 @@ struct CategoryView: View {
             }
         })
         .background(Color("Nav"))
+    }
+}
+
+
+struct CategoryView_Previews: PreviewProvider {
+    static var previews: some View {
+        Food()
     }
 }
