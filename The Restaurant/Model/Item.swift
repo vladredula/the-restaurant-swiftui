@@ -11,7 +11,7 @@ struct Items: Codable {
     var items: [Item]
 }
 
-struct Item: Identifiable, Codable {
+struct Item: Identifiable, Codable, Equatable {
     var id: Int
     var name: String
     var tname: String

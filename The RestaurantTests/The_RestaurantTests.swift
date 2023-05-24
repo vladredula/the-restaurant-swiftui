@@ -10,27 +10,86 @@ import XCTest
 
 final class The_RestaurantTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    @MainActor
+    func test_filter_items_by_category() {
+        let sut = MenuModel()
+        
+        sut.items = [
+            Item(id: 1, name: "item1", tname: "アイテム1", category: "cat1", subcategory: "subCat1", price: "1", imgUrl: "url", itemType: "food"),
+            Item(id: 2, name: "item2", tname: "アイテム2", category: "cat1", subcategory: "subCat1", price: "1", imgUrl: "url", itemType: "food"),
+            Item(id: 3, name: "item3", tname: "アイテム3", category: "cat2", subcategory: "subCat1", price: "1", imgUrl: "url", itemType: "food"),
+            Item(id: 4, name: "item4", tname: "アイテム4", category: "cat3", subcategory: "subCat1", price: "1", imgUrl: "url", itemType: "food"),
+            Item(id: 5, name: "item5", tname: "アイテム5", category: "cat2", subcategory: "subCat1", price: "1", imgUrl: "url", itemType: "food")
+        ]
+        
+        let actual = sut.filterItems(abbr: "cat2")
+        
+        let expected = [
+            Item(id: 3, name: "item3", tname: "アイテム3", category: "cat2", subcategory: "subCat1", price: "1", imgUrl: "url", itemType: "food"),
+            Item(id: 5, name: "item5", tname: "アイテム5", category: "cat2", subcategory: "subCat1", price: "1", imgUrl: "url", itemType: "food")
+        ]
+        
+        XCTAssertEqual(actual, expected)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    @MainActor
+    func test_get_subcategories_of_a_category() {
+        let sut = MenuModel()
+        
+        sut.items = [
+            Item(id: 1, name: "item1", tname: "アイテム1", category: "cat1", subcategory: "subCat1", price: "1", imgUrl: "url", itemType: "food"),
+            Item(id: 2, name: "item2", tname: "アイテム2", category: "cat1", subcategory: "subCat1", price: "1", imgUrl: "url", itemType: "food"),
+            Item(id: 3, name: "item3", tname: "アイテム3", category: "cat2", subcategory: "subCat1", price: "1", imgUrl: "url", itemType: "food"),
+            Item(id: 4, name: "item4", tname: "アイテム4", category: "cat3", subcategory: "subCat1", price: "1", imgUrl: "url", itemType: "food"),
+            Item(id: 5, name: "item5", tname: "アイテム5", category: "cat2", subcategory: "subCat2", price: "1", imgUrl: "url", itemType: "food")
+        ]
+        
+        let actual = sut.getSubCategories(abbr: "cat2")
+        
+        let expected = [
+            "subCat1",
+            "subCat2"
+        ]
+        
+        XCTAssertEqual(actual, expected)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func test_fetch_food_items_is_not_nil() async {
+        let sut = HTTPClient()
+        var actual: [Item] = []
+        
+        do {
+            actual = try await sut.fetchItems(url: URL.foodItems)
+        } catch {
+            print(error)
         }
+        
+        XCTAssertNotNil(actual)
     }
-
+    
+    func test_fetch_drink_items_is_not_nil() async {
+        let sut = HTTPClient()
+        var actual: [Item] = []
+        
+        do {
+            actual = try await sut.fetchItems(url: URL.drinkItems)
+        } catch {
+            print(error)
+        }
+        
+        XCTAssertNotNil(actual)
+    }
+    
+    func test_fetch_food_categories_is_not_nil() async {
+        let sut = HTTPClient()
+        var actual: [Category] = []
+        
+        do {
+            actual = try await sut.fetchCategories(url: URL.foodCategories)
+        } catch {
+            print(error)
+        }
+        
+        XCTAssertNotNil(actual)
+    }
 }
