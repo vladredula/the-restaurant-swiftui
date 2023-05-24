@@ -8,7 +8,7 @@
 import Foundation
 
 class HTTPClient {
-    let token = "therestaurantauthtoken"
+    var token = "therestaurantauthtoken"
     
     func fetchItems(url: URL) async throws -> [Item] {
         
